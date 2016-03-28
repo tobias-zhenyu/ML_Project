@@ -145,8 +145,8 @@ Take the random forest model and apply it on the validation set.
 Generate a confusion matrix of predictions vs. actuals.
 
 ```{r, predictValidation}
-validation_pred <- predict(model_rf, newdata=validation_clean)
-confusionMatrix(validation_pred, validation_clean$classe)
+vali_pred <- predict(model_rf, newdata=validation_clean)
+confusionMatrix(vali_pred, validation_clean$classe)
 ```
 
 The accuracy here in this model is 99.73%.
