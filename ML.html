@@ -225,9 +225,9 @@ usefullFeatures &lt;- predictors[-nonusefullPredictors$nzv]</code></pre>
 <h2>Train Model</h2>
 <p>The <code>doParallel</code> library is used to distribute workload across all CPU cores.</p>
 <pre class="r"><code>registerDoParallel(detectCores())     </code></pre>
-<p>Build Random Forest model on our training data set using 4-fold cross validation.</p>
+<p>Build Random Forest model on our training data set using 8-fold cross validation.</p>
 <pre class="r"><code>set.seed(509475)
-tc &lt;- trainControl(method=&quot;cv&quot;, number=4)
+tc &lt;- trainControl(method=&quot;cv&quot;, number=8)
 if (file.exists(&quot;data/model_rf.Rdata&quot;)) {
                 model_rf &lt;- readRDS(&quot;data/model_rf.Rdata&quot;)
 } else {
