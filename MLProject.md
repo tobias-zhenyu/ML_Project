@@ -32,7 +32,7 @@ https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv
 The data for this project come from this source: http://groupware.les.inf.puc-rio.br/har.  
 
 ```{r libraryLoad, message=FALSE, warning=FALSE}
-library(ggplot)
+library(ggplot2)
 library(parallel)
 library(rpart)
 library(dplyr)
