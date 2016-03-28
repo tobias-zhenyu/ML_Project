@@ -126,11 +126,11 @@ The `doParallel` library is used to distribute workload across all CPU cores.
 registerDoParallel(detectCores())     
 ```
 
-Build Random Forest model on our training data set using 4-fold cross validation. 
+Build Random Forest model on our training data set using 8-fold cross validation. 
 
 ```{r, createRFmodel}
 set.seed(509475)
-tc <- trainControl(method="cv", number=4)
+tc <- trainControl(method="cv", number=8)
 if (file.exists("data/model_rf.Rdata")) {
                 model_rf <- readRDS("data/model_rf.Rdata")
 } else {
