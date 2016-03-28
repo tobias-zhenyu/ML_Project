@@ -239,7 +239,7 @@ if (file.exists(&quot;data/model_rf.Rdata&quot;)) {
 <div id="evaluate-model" class="section level2">
 <h2>Evaluate Model</h2>
 <p>Take the random forest model and apply it on the validation set. Generate a confusion matrix of predictions vs. actuals.</p>
-<pre class="r"><code>validation_pred &lt;- predict(model_rf, newdata=validation_clean)</code></pre>
+<pre class="r"><code>vali_pred &lt;- predict(model_rf, newdata=validation_clean)</code></pre>
 <pre><code>## Loading required package: randomForest</code></pre>
 <pre><code>## randomForest 4.6-12</code></pre>
 <pre><code>## Type rfNews() to see new features/changes/bug fixes.</code></pre>
@@ -251,7 +251,7 @@ if (file.exists(&quot;data/model_rf.Rdata&quot;)) {
 <pre><code>## The following object is masked from 'package:ggplot2':
 ## 
 ##     margin</code></pre>
-<pre class="r"><code>confusionMatrix(validation_pred, validation_clean$classe)</code></pre>
+<pre class="r"><code>confusionMatrix(vali_pred, validation_clean$classe)</code></pre>
 <pre><code>## Confusion Matrix and Statistics
 ## 
 ##           Reference
